@@ -1,0 +1,122 @@
+@use "../commonParts/commonSetting" as *;
+@use "../commonParts/responsive" as *;
+@use "../commonParts/fonts" as *;
+
+#mainContainer{
+    width: 100%;
+}
+
+#impactPart_container{
+    margin: 5% auto;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    @include mq(md){
+        height: 250px;
+    }
+    @include mq(sm){
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 400px;
+    }
+    background-color: rgba($color: $accentColor, $alpha: 0.2);
+}
+.impactText{
+    width: 50%;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+    @include mq(md){
+        font-size: 22px;
+    }
+    @include mq(sm){
+        font-size: 16px;
+        width: 100%;
+    }
+}
+.imageContainer{
+    width: 50%;
+    text-align: center;
+    @include mq(sm){
+        width: 100%;
+    }
+    & .impactImage{
+        width: 50%;
+    }
+
+}
+        
+#experiencePart_container{
+    width: 100%;
+}
+.ex-text{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 50px;
+    font-family: 'Azuki';   
+    @include mq(lg){
+        font-size: 40px;
+    }
+    @include mq(sm){
+        font-size: 24px;
+    }
+}
+#experienceLists{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+    @include mq(sm){
+        flex-direction: column;
+    }
+    & .ex-list{
+        width: 27%;
+        margin: 0 3%;
+        text-align: center;
+        @include mq(sm){
+            width: 100%;
+            margin: 5% auto;
+        }
+
+        & .ex-title{
+            font-size: 22px;
+            @include mq(md){
+                font-size: 18px;
+            }
+            @include mq(sm){
+                font-size: 14px;
+            }
+        }
+
+        & .ex-img{
+            font-size: 50px;
+            margin: 5% 0;
+            @include mq(md){
+                font-size: 35px;
+            }
+        }
+
+        & .introText{
+            margin: 0 20%;
+            font-size: 20px;
+            @include mq(md){
+                font-size: 16px;
+            }
+            @include mq(sm){
+                font-size: 12px;
+            }
+        }
+
+        & .toDetail{
+            color: aqua;
+            text-decoration-line: underline;
+            font-size: 20px;
+            @include mq(md){
+                font-size: 16px;
+            }
+            @include mq(sm){
+                font-size: 12px;
+            }
+        }
+    }
+}

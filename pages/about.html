@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about me</title>
+    <link rel="stylesheet" href="../assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles/aboutme.css">
+</head>
+<body>
+    <div id="container">
+        <nav class="mobile-menu">
+            <div class="closeButton"><i class="fa-solid fa-xmark"></i></div>
+            <div class="menu"><a href="./"><ruby>TOP PAGE<rt>トップページへ</rt></ruby></a></div>
+            <div class="menu"><a href="./about.html"><ruby>about me<rt>私について</rt></ruby></a></div>
+            <div class="menu"><a href="./skills.html"><ruby>skills<rt>スキルと経験・実績</rt></ruby></a></div>
+        </nav>
+        <!-- スマホ用のメニューバー -->
+        <div class="menu-bar">
+            <button class="btn">
+                <span class="barline"></span>
+                <span class="barline"></span>
+                <span class="barline"></span>
+            </button>
+        </div>
+        <header id="header">
+            <div class="topButton">
+                <i class="fa-solid fa-spider"></i>
+                <span class="topTitle"><a href="./">TOP PAGE</a></span>
+            </div>
+            <div id="pagesButton">
+                <div class="jump aboutme"><a href="./about.html">about me</a></div>
+                <div class="jump skills"><a href="./skills.html">skills</a></div>
+            </div>
+        </header>
+
+        <div id="mainContainer">
+            <div class="mainTitle">about me</div>
+            <div class="introSlider">
+                <!-- ここはswiperで実装予定1枚1枚はパワポで作る -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="../images/aboutme_1.png" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img src="../images/aboutme_2.png" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img src="../images/aboutme_3.png" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img src="../images/aboutme_4.png" alt="" srcset=""></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>          
+                          
+            </div>
+
+            <div id="selfIntroContainer">
+                <div class="selfPhoto"><img src="../images/AI_me_noback.png" alt=""></div> 
+                <div class="selfIntroTexts">
+                    <p>名前：井手 理智</p>
+                    <p>出身：宮崎県西都市</p>
+                    <p>趣味：ゲーム・音楽を聴く・硬式テニス</p>
+                    <p>今興味ある技術：AI画像生成・React/TypeScript</p>
+                    <p>連絡先：hm19004@student.miyazaki-u.ac.jp</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="bttButton"><a href="#">Back to Top</a></div>
+        <footer id="footer">
+            <div id="snsContainer">
+                <div class="snsList">
+                    <p>Youtube</p>
+                    <p class="icons"><i class="fa-brands fa-youtube" style="color: #ec0909;"></i></p>
+                </div>
+                <div class="snsList">
+                    <p>Github</p>
+                    <p class="icons"><i class="fa-brands fa-github" style="color: #000000;"></i></p>
+                </div>
+            </div>
+            <div class="nameText">
+                <p>井手 理智</p>
+                <p>Masatomo Ide</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/aboutme.js"></script>
+</body>
+</html>

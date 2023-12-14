@@ -1,0 +1,69 @@
+@use "../commonParts/commonSetting" as *;
+@use "../commonParts/responsive" as *;
+@use "../commonParts/fonts" as *;
+
+#mainContainer{
+    width: 100%;
+}
+
+.mainTitle{
+    margin: 5% 5%;
+    font-size: 30px;
+    @include mq(md){
+        font-size: 24px;
+    }
+    @include mq(sm){
+        font-size: 16px;
+    }
+}
+
+.introSlider{
+    width: 100%;
+    height: 500px;
+    @include mq(md){
+        height: 300px;
+    }
+    & .swiper-slide img{
+        width: 70%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%) ;
+        max-width: 60%;
+        object-fit: cover;
+
+        @include mq(md){
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+#selfIntroContainer{
+    margin: 10% 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    & .selfPhoto{
+        width: 35%;
+        margin-right: 5%;
+        text-align: center;
+        & img{
+            width: 70%;
+        }
+    }
+    & .selfIntroTexts{
+        width: 55%;
+        margin-right: 5%;
+        font-size: 20px;
+        @include mq(md){
+            font-size: 16px;
+        }
+        @include mq(sm){
+            font-size: 12px;
+        }
+            
+    }
+}

@@ -1,0 +1,190 @@
+@use "responsive" as *;
+@use "fonts" as *;
+
+$mainColor:black;
+$assortColor:#cccccc;    
+$accentColor:#6cebbb;
+
+a{
+    text-decoration: none;
+    color: $mainColor;
+}
+
+.mobile-menu{
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: rgba($color:$accentColor, $alpha: 0.8);
+    display: none;
+
+    & .closeButton{
+        position: absolute;
+        right: 0;
+        width: 50px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    & .menu{
+        width: 100vw;
+        list-style: none;
+        font-size: 30px;
+        margin: 70px auto;
+        text-align: center;
+    }
+}
+
+#container{
+    max-width: 1400px;
+    // height:auto;
+    @include mq(lg){
+        max-width: 1200px;
+    }
+    @include mq(md){
+        max-width: 900px;
+    }
+    @include mq(sm){
+        max-width: 420px;
+    }
+}
+#header{
+    width: 100%;
+    // height: 5%;
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 0;
+    @include mq(sm){
+        // display: none;
+    }
+}
+
+.topButton{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 50px;
+    @include mq(lg){
+        font-size: 40px;
+    }
+    @include mq(sm){
+        font-size: 24px;
+    }
+    & .topTitle{
+        font-family: 'Azuki';  
+        & > a{
+            color: $accentColor;
+        } 
+
+    }
+}
+#pagesButton{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    @include mq(sm){
+        display: none;
+    }
+    & .jump{
+        color:$mainColor;
+        font-size: 32px;
+        @include mq(md){
+            font-size: 24px;
+        }
+    }
+}
+
+.menu-bar{
+    display: none;
+    z-index: 100;
+    position: fixed;
+    right: 10px;
+    width: 50px;
+    @include mq(sm){
+        display: inline-block;
+    }
+    & .btn{
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+    & .barline{
+        background-color: $mainColor;
+        width: 30px;
+        height: 2px;
+        display: block;
+        margin-bottom: 9px;
+        transition: transform 0.7s;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.bttButton{
+    width: 10%;
+    margin: 1% auto;
+    text-align: center;
+    font-family: 'Kokumin';
+    background-color: $accentColor;
+    font-size: 20px;
+    @include mq(sm){
+        font-size: 15px;
+    }
+}
+
+#footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top: solid 1px $mainColor;
+}
+#snsContainer{
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    &:nth-child(1){
+        padding-left: 5%;
+    }
+    & .snsList{
+        width: 30%;
+        text-align: center;
+        cursor: pointer;
+        & p{
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            @include mq(lg){
+                font-size: 20px;
+            }
+            @include mq(sm){
+                font-size: 12px;
+            }
+        }
+        & .icons{
+            margin: 0;
+            padding: 0;
+            font-size: 50px;
+            @include mq(sm){
+                font-size: 30px;
+            }
+        }
+    }
+}
+.nameText{
+    width: 20%;
+    padding-right: 5%;
+    color: $mainColor;
+    text-align: right;
+    & p{
+        font-size: 24px;
+        @include mq(lg){
+            font-size: 20px;
+        }
+        @include mq(sm){
+            font-size: 12px;
+        }
+    }
+}
