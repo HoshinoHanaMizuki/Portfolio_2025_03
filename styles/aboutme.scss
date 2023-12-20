@@ -20,6 +20,7 @@
 .introSlider{
     width: 100%;
     height: 500px;
+    overflow: hidden;
     @include mq(md){
         height: 300px;
     }
@@ -33,7 +34,7 @@
         max-width: 60%;
         object-fit: cover;
 
-        @include mq(md){
+        @include mq(sm){
             width: 100%;
             max-width: 100%;
         }
