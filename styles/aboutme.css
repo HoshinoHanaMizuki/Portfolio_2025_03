@@ -311,7 +311,6 @@ a {
 .introSlider {
   width: 100%;
   height: 500px;
-  overflow: hidden;
 }
 @media (max-width:960px) {
   .introSlider {
@@ -328,6 +327,7 @@ a {
   max-width: 60%;
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
 }
 @media (max-width:430px) {
   .introSlider .swiper-slide img {
