@@ -308,6 +308,33 @@ a {
   }
 }
 
+.introSlider {
+  width: 100vw;
+  height: 500px;
+}
+@media (max-width:960px) {
+  .introSlider {
+    height: 300px;
+  }
+}
+.introSlider .swiper-slide img {
+  height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+@media (max-width:430px) {
+  .introSlider .swiper-slide img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 #selfIntroContainer {
   margin: 10% 0;
   width: 100%;
