@@ -30,7 +30,7 @@ function changeImage(){
   }
 }
 
-// クリックでz-indexの値をprevで-1,nextで+1
+// クリックでz-indexの値をprevで-1,nextで+1(循環リスト)
 function changeSlide(changeNum,slides){
   for(let i=0; i<slides.length; i++){
     console.log(i+1+"枚目だよ");
