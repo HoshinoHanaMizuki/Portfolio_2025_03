@@ -6,22 +6,22 @@ console.log(slides);
 console.log(slides[0].src);
 console.log(slides[0].width);
 
-if(window.matchMedia("(max-width: 700px)").matches){
-    slides[0].src="../images/aboutme_1_tabsm.png";
-    slides[1].src="../images/aboutme_2_tabsm.png";
-    slides[2].src="../images/aboutme_3_tabsm.png";
-    slides[3].src="../images/aboutme_4_tabsm.png";
-}
-
 function changeImage(){
-  // デバイスの向きが変更されたときに実行したい処理を記述する
+  // デバイスの向きが変更されたときに実行したい処理を記述する(スマホ横サイズは除く)
   if (window.matchMedia("(orientation: landscape)").matches && window.matchMedia("(min-width: 700px)").matches) {
     // 横向きの場合の処理
     slides[0].src="../images/aboutme_1_PC.png";
     slides[1].src="../images/aboutme_2_PC.png";
     slides[2].src="../images/aboutme_3_PC.png";
     slides[3].src="../images/aboutme_4_PC.png";
-  } else if (window.matchMedia("(orientation: portrait)").matches) {
+  } 
+  else if(window.matchMedia("(max-width: 700px)").matches){
+    slides[0].src="../images/aboutme_1_tabsm.png";
+    slides[1].src="../images/aboutme_2_tabsm.png";
+    slides[2].src="../images/aboutme_3_tabsm.png";
+    slides[3].src="../images/aboutme_4_tabsm.png";
+  }
+  else if (window.matchMedia("(orientation: portrait)").matches) {
     // 縦向きの場合の処理
     slides[0].src="../images/aboutme_1_tabsm.png";
     slides[1].src="../images/aboutme_2_tabsm.png";
@@ -42,6 +42,10 @@ function changeSlide(changeNum,slides){
     console.log(slides[i].style.zIndex);
   }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  changeImage();
+});
 
 //画像は、PCサイズのときをデフォルトにしてタブレットサイズ以下と画面切り替え時のときはそれ用にパスを変更
 window.addEventListener("orientationchange", () => {
