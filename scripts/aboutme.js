@@ -1,11 +1,12 @@
 const slides=document.querySelectorAll(".slide");
+const selfIntro=document.querySelector("#selfIntroContainer");
 const prevArrow=document.querySelector(".prevArrow");
 const nextArrow=document.querySelector(".nextArrow");
 
-console.log(slides);
-console.log(slides[0].src);
-console.log(slides[0].width);
+// スクロール監視
+io.observe(selfIntro);
 
+// 端末サイズや画面の向きで画像を切り替える関数
 function changeImage(){
   // デバイスの向きが変更されたときに実行したい処理を記述する(スマホ横サイズは除く)
   if (window.matchMedia("(orientation: landscape)").matches && window.matchMedia("(min-width: 700px)").matches) {
@@ -30,7 +31,7 @@ function changeImage(){
   }
 }
 
-// クリックでz-indexの値をprevで-1,nextで+1(循環リスト)
+// クリックでスライドショーのz-indexの値をprevで-1,nextで+1(循環リスト)
 function changeSlide(changeNum,slides){
   for(let i=0; i<slides.length; i++){
     console.log(i+1+"枚目だよ");
