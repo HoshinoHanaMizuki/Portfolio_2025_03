@@ -6,9 +6,16 @@ console.log(slides);
 console.log(slides[0].src);
 console.log(slides[0].width);
 
+if(window.matchMedia("(max-width: 700px)").matches){
+    slides[0].src="../images/aboutme_1_tabsm.png";
+    slides[1].src="../images/aboutme_2_tabsm.png";
+    slides[2].src="../images/aboutme_3_tabsm.png";
+    slides[3].src="../images/aboutme_4_tabsm.png";
+}
+
 function changeImage(){
   // デバイスの向きが変更されたときに実行したい処理を記述する
-  if (window.matchMedia("(orientation: landscape)").matches) {
+  if (window.matchMedia("(orientation: landscape)").matches && window.matchMedia("(min-width: 700px)").matches) {
     // 横向きの場合の処理
     slides[0].src="../images/aboutme_1_PC.png";
     slides[1].src="../images/aboutme_2_PC.png";
