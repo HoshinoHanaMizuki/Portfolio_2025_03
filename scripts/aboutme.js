@@ -10,16 +10,16 @@ function changeImage(){
   // デバイスの向きが変更されたときに実行したい処理を記述する
   if (window.matchMedia("(orientation: landscape)").matches) {
     // 横向きの場合の処理
-    slides[0].src="../images/aboutme_1_tabsm.png";
-    slides[1].src="../images/aboutme_2_tabsm.png";
-    slides[2].src="../images/aboutme_3_tabsm.png";
-    slides[3].src="../images/aboutme_4_tabsm.png";
-  } else if (window.matchMedia("(orientation: portrait)").matches) {
-    // 縦向きの場合の処理
     slides[0].src="../images/aboutme_1_PC.png";
     slides[1].src="../images/aboutme_2_PC.png";
     slides[2].src="../images/aboutme_3_PC.png";
     slides[3].src="../images/aboutme_4_PC.png";
+  } else if (window.matchMedia("(orientation: portrait)").matches) {
+    // 縦向きの場合の処理
+    slides[0].src="../images/aboutme_1_tabsm.png";
+    slides[1].src="../images/aboutme_2_tabsm.png";
+    slides[2].src="../images/aboutme_3_tabsm.png";
+    slides[3].src="../images/aboutme_4_tabsm.png";
   }
 }
 
