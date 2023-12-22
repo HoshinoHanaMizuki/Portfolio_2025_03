@@ -63,6 +63,7 @@ $zValue:4;
 }
 
 #selfIntroContainer{
+    opacity: 0;
     margin: 10% 0;
     width: 100%;
     display: flex;
@@ -80,6 +81,11 @@ $zValue:4;
         width: 55%;
         margin-right: 5%;
         font-size: 20px;
+        @for $i from 1 through 5{
+            & p:nth-child(#{$i}){
+                margin-bottom: 5%;
+            }
+        }
         @include mq(md){
             font-size: 16px;
         }
@@ -87,5 +93,9 @@ $zValue:4;
             font-size: 12px;
         }
             
+    }
+
+    &.animate{
+        animation: appear 2s ease forwards;
     }
 }

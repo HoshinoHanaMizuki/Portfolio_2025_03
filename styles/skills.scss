@@ -25,6 +25,10 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 5% 5%;
+    opacity: 0;
+    &.animate{
+        animation: fadeUnderIn 2s ease 0.3s forwards;
+    }
 
     & .myList{
         width: 27%;
