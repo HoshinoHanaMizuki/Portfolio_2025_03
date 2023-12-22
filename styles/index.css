@@ -88,6 +88,10 @@ a {
   color: black;
 }
 
+.jump:hover {
+  animation: bigger 0.8s forwards;
+}
+
 .mobile-menu {
   position: fixed;
   z-index: 100;
@@ -289,6 +293,14 @@ a {
   }
 }
 
+@keyframes bigger {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
 #mainContainer {
   width: 100%;
 }
