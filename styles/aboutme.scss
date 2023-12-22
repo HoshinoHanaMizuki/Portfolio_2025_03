@@ -2,6 +2,8 @@
 @use "../commonParts/responsive" as *;
 @use "../commonParts/fonts" as *;
 
+$zValue:5;
+
 #mainContainer{
     width: 100%;
 }
@@ -17,33 +19,46 @@
     }
 }
 
-.introSlider{
-    width: 100vw;
+.prevArrow,.nextArrow{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    cursor: pointer;
+}
+.prevArrow{
+    left: 5px;
+}
+.nextArrow{
+    right: 5px;
+}
+
+.slidesContainer{
+    position: relative;
+    width: 100%;
     height: 500px;
+    margin-bottom: 5%;
     @include mq(md){
         height: 300px;
     }
-    & .swiper-slide{
-        overflow: hidden;
-        & img{
-            width: 100vw;
-            height: 100%;
-            max-width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform:translate(-50%,-50%) ;
-            object-fit: cover;
-            overflow: hidden;
+    @include mq(sm){
+        height: 200px;
+    }
+
+    & .slide{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        object-fit: cover;
+
         
-            // @include mq(md){
-            //     max-width: 70%;
-            // }
-            // @include mq(sm){
-            //     width: 100%;
-            //     max-width: 100%;
-            // }
+        @for $i from 1 to 5 {
+            &:nth-child(#{$i}) {
+                z-index: calc($zValue - #{$i});
+            }
         }
+        
     }
 }
 
