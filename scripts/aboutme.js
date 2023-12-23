@@ -17,17 +17,17 @@ function changeImage(){
     slides[3].src="../images/aboutme_4_PC.png";
   } 
   else if(window.matchMedia("(max-width: 700px)").matches){
-    slides[0].src="../images/aboutme1_tabsm.png";
-    slides[1].src="../images/aboutme2_tabsm.png";
-    slides[2].src="../images/aboutme3_tabsm.png";
-    slides[3].src="../images/aboutme4_tabsm.png";
+    slides[0].src="../images/aboutme_1_tabsm.png";
+    slides[1].src="../images/aboutme_2_tabsm.png";
+    slides[2].src="../images/aboutme_3_tabsm.png";
+    slides[3].src="../images/aboutme_4_tabsm.png";
   }
   else if (window.matchMedia("(orientation: portrait)").matches) {
     // 縦向きの場合の処理
-    slides[0].src="../images/aboutme1_tabsm.png";
-    slides[1].src="../images/aboutme2_tabsm.png";
-    slides[2].src="../images/aboutme3_tabsm.png";
-    slides[3].src="../images/aboutme4_tabsm.png";
+    slides[0].src="../images/aboutme_1_tabsm.png";
+    slides[1].src="../images/aboutme_2_tabsm.png";
+    slides[2].src="../images/aboutme_3_tabsm.png";
+    slides[3].src="../images/aboutme_4_tabsm.png";
   }
 }
 
