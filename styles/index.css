@@ -98,7 +98,7 @@ a {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
-  background-color: rgba(108, 235, 187, 0.8);
+  background-color: rgba(108, 235, 187, 0.9);
   display: none;
 }
 .mobile-menu .closeButton {
