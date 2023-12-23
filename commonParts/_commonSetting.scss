@@ -5,6 +5,10 @@ $mainColor:black;
 $assortColor:#cccccc;    
 $accentColor:#6cebbb;
 
+body{
+    max-width:1400px;
+}
+
 a{
     text-decoration: none;
     color: $mainColor;
