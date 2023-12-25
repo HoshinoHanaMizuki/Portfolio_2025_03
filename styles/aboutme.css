@@ -89,8 +89,7 @@ a {
 }
 
 .jump:hover {
-  -webkit-animation: bigger 0.8s forwards;
-          animation: bigger 0.8s forwards;
+  animation: bigger 0.8s forwards;
 }
 
 .mobile-menu {
@@ -295,15 +294,6 @@ a {
   }
 }
 
-@-webkit-keyframes bigger {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
-  }
-}
-
 @keyframes bigger {
   from {
     transform: scale(1);
@@ -312,30 +302,10 @@ a {
     transform: scale(1.2);
   }
 }
-@-webkit-keyframes fadeUnderIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
 @keyframes fadeUnderIn {
   from {
     opacity: 0;
     transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-@-webkit-keyframes fadeRightIn {
-  from {
-    opacity: 0;
-    transform: translate(200px, -20px);
   }
   to {
     opacity: 1;
@@ -350,16 +320,6 @@ a {
   to {
     opacity: 1;
     transform: translate(0);
-  }
-}
-@-webkit-keyframes appear {
-  from {
-    opacity: 0;
-    transform: scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
   }
 }
 @keyframes appear {
@@ -432,16 +392,16 @@ a {
      object-fit: cover;
 }
 .slidesContainer .slide:nth-child(1) {
-  z-index: calc($zValue - 1);
+  z-index: calc(4 - 1);
 }
 .slidesContainer .slide:nth-child(2) {
-  z-index: calc($zValue - 2);
+  z-index: calc(4 - 2);
 }
 .slidesContainer .slide:nth-child(3) {
-  z-index: calc($zValue - 3);
+  z-index: calc(4 - 3);
 }
 .slidesContainer .slide:nth-child(4) {
-  z-index: calc($zValue - 4);
+  z-index: calc(4 - 4);
 }
 
 #selfIntroContainer {
@@ -490,6 +450,5 @@ a {
   }
 }
 #selfIntroContainer.animate {
-  -webkit-animation: appear 2s ease forwards;
-          animation: appear 2s ease forwards;
+  animation: appear 2s ease forwards;
 }/*# sourceMappingURL=aboutme.css.map */
