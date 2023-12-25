@@ -1,0 +1,101 @@
+@use "../commonParts/commonSetting" as *;
+@use "../commonParts/responsive" as *;
+@use "../commonParts/fonts" as *;
+
+$zValue:4;
+
+#mainContainer{
+    width: 100%;
+}
+
+.mainTitle{
+    margin: 5% 5%;
+    font-size: 30px;
+    @include mq(md){
+        font-size: 24px;
+    }
+    @include mq(sm){
+        font-size: 16px;
+    }
+}
+
+.prevArrow,.nextArrow{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    cursor: pointer;
+}
+.prevArrow{
+    left: 5px;
+}
+.nextArrow{
+    right: 5px;
+}
+
+.slidesContainer{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 5%;
+    @include mq(md){
+        height: 300px;
+    }
+    @include mq(sm){
+        height: 200px;
+    }
+
+    & .slide{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        object-fit: cover;
+
+        
+        @for $i from 1 to 5 {
+            &:nth-child(#{$i}) {
+                z-index: calc($zValue - #{$i});
+            }
+        }
+        
+    }
+}
+
+#selfIntroContainer{
+    opacity: 0;
+    margin: 10% 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    & .selfPhoto{
+        width: 35%;
+        margin-right: 5%;
+        text-align: center;
+        & img{
+            width: 70%;
+        }
+    }
+    & .selfIntroTexts{
+        width: 55%;
+        margin-right: 5%;
+        font-size: 20px;
+        @for $i from 1 through 5{
+            & p:nth-child(#{$i}){
+                margin-bottom: 5%;
+            }
+        }
+        @include mq(md){
+            font-size: 16px;
+        }
+        @include mq(sm){
+            font-size: 12px;
+        }
+            
+    }
+
+    &.animate{
+        animation: appear 2s ease forwards;
+    }
+}
