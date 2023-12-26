@@ -83,13 +83,18 @@
   font-family: "HG";
   src: local("HG-行書体"), local("HG 行書体");
 }
+body {
+  margin: 0 auto;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 
 .jump:hover {
-  animation: bigger 0.8s forwards;
+  -webkit-animation: bigger 0.8s forwards;
+          animation: bigger 0.8s forwards;
 }
 
 .mobile-menu {
@@ -294,6 +299,15 @@ a {
   }
 }
 
+@-webkit-keyframes bigger {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
 @keyframes bigger {
   from {
     transform: scale(1);
@@ -302,10 +316,30 @@ a {
     transform: scale(1.2);
   }
 }
+@-webkit-keyframes fadeUnderIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 @keyframes fadeUnderIn {
   from {
     opacity: 0;
     transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes fadeRightIn {
+  from {
+    opacity: 0;
+    transform: translate(200px, -20px);
   }
   to {
     opacity: 1;
@@ -320,6 +354,16 @@ a {
   to {
     opacity: 1;
     transform: translate(0);
+  }
+}
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes appear {
@@ -386,6 +430,7 @@ a {
 }
 .imageContainer .impactImage {
   width: 50%;
+  max-width: 300px;
 }
 
 #experiencePart_container {
@@ -393,7 +438,8 @@ a {
   opacity: 0;
 }
 #experiencePart_container.animate {
-  animation: fadeRightIn 2s ease forwards;
+  -webkit-animation: fadeRightIn 2s ease forwards;
+          animation: fadeRightIn 2s ease forwards;
 }
 
 .ex-text {
@@ -473,7 +519,8 @@ a {
 }
 #experienceLists .ex-list .toDetail {
   color: aqua;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   font-size: 20px;
 }
 @media (max-width:960px) {

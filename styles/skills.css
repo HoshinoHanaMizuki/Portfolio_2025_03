@@ -83,13 +83,18 @@
   font-family: "HG";
   src: local("HG-行書体"), local("HG 行書体");
 }
+body {
+  margin: 0 auto;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 
 .jump:hover {
-  animation: bigger 0.8s forwards;
+  -webkit-animation: bigger 0.8s forwards;
+          animation: bigger 0.8s forwards;
 }
 
 .mobile-menu {
@@ -294,6 +299,15 @@ a {
   }
 }
 
+@-webkit-keyframes bigger {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
 @keyframes bigger {
   from {
     transform: scale(1);
@@ -302,10 +316,30 @@ a {
     transform: scale(1.2);
   }
 }
+@-webkit-keyframes fadeUnderIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 @keyframes fadeUnderIn {
   from {
     opacity: 0;
     transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes fadeRightIn {
+  from {
+    opacity: 0;
+    transform: translate(200px, -20px);
   }
   to {
     opacity: 1;
@@ -320,6 +354,16 @@ a {
   to {
     opacity: 1;
     transform: translate(0);
+  }
+}
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes appear {
@@ -360,7 +404,8 @@ a {
   opacity: 0;
 }
 #langContainer.animate, #toolContainer.animate, #devContainer.animate {
-  animation: fadeUnderIn 2s ease 0.3s forwards;
+  -webkit-animation: fadeUnderIn 2s ease 0.3s forwards;
+          animation: fadeUnderIn 2s ease 0.3s forwards;
 }
 #langContainer .myList, #toolContainer .myList, #devContainer .myList {
   width: 27%;
